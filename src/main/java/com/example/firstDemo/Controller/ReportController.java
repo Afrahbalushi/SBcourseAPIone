@@ -13,29 +13,5 @@ public class ReportController {
     @Autowired
     ReportService reportService;
 
-    @RequestMapping(method = RequestMethod.GET, value = "/getStudentSchoolNameReport")
-    public String getReportForStudentSchoolName(){
 
-
-        try {
-            return reportService.generateReportForStudentWithSchoolName();
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-            return new Exception("Error").getMessage();
-
-        }
-    }
-
-    @RequestMapping(method = RequestMethod.GET, value = "/generateReportForCourseMark")
-    public String generateReportForCourseMark(){
-
-
-        try {
-            return reportService.generateReportForCourseMark();
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-            return new Exception("Error").getMessage();
-
-        }
-    }
 }

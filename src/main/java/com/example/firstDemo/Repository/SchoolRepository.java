@@ -1,5 +1,6 @@
 package com.example.firstDemo.Repository;
 
+
 import com.example.firstDemo.Models.School;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -24,7 +25,7 @@ public interface SchoolRepository extends JpaRepository<School, Integer> {
     @Query(value = "SELECT s from School s where s.isActive = true")
     List<School> getAllActiveSchools();
 
-    void save(School school);
-
     List<School> findAllById(List<Integer> schoolIdsThatUserWants);
+
+  //  Object save(School school) ;
 }
